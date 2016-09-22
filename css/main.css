@@ -1,3 +1,165 @@
 * {
   font-family: 'Lato', sans-serif;
+  color: #1c2222;
+}
+
+/* GENERIC CLASSES OBS. FOR FLEXBOX ROW */
+.all-in-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.horizontal-center {
+  display: flex;
+  justify-content: center;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 7em;
+}
+
+h2 {
+  font-size: 5em;
+  font-weight: 900;
+}
+
+.navy-blue {
+  color: #1c2222;
+}
+
+.gold-yellow {
+  color: #fecd08;
+}
+
+.deep-red {
+  color: #e80033;
+}
+
+.plain-white {
+  color: #FFF;
+}
+
+/* FIRST CONTAINER */
+.first-container {
+    margin-bottom: 10px;
+}
+
+.logo {
+  width: 70%;
+}
+
+.site-title {
+  margin: 0;
+  color: #1c2222;
+}
+
+.main-contact {
+  margin: 0;
+  float: right;
+}
+
+/* SECOND CONTAINER */
+.second-container {
+  background: #1c2222;
+  height: 350px;
+}
+
+.second-container h2 {
+  margin: 10px;
+}
+
+.skills-wrapper {
+  position: relative;
+}
+
+.major-skill {
+  font-size: 5em;
+  font-weight: 100;
+  margin: 0;
+}
+
+.secondary-skill {
+  font-size: 0.5em;
+  font-weight: 700;
+  margin: 0;
+}
+
+.major-skill.web {
+  position: absolute;
+  top: 65px;
+  left: -85px;
+}
+
+.secondary-skill.frontend {
+  position: absolute;
+  transform: rotate(-15deg);
+  display: block;
+  top: -40px;
+  left: 130px;
+}
+
+.secondary-skill.backend {
+  position: absolute;
+  transform: rotate(-15deg);
+  display: block;
+  top: 0px;
+  left: 140px;
+}
+
+.secondary-skill.equal {
+  position: absolute;
+  transform: rotate(-15deg);
+  display: block;
+  top: -50px;
+  left: 290px;
+  font-size: 0.8em;
+}
+
+.secondary-skill.fullstack {
+  position: absolute;
+  transform: rotate(-8deg);
+  display: block;
+  top: -50px;
+  left: 332px;
+}
+
+.major-skill.ios {
+  position: absolute;
+  top: 135px;
+  left: 75px;
+}
+
+.secondary-skill.objc,
+.secondary-skill.slash,
+.secondary-skill.swift {
+  position: relative;
+  left: -380px;
+}
+
+.second-container .connector {
+  position: absolute;
+  top: 135px;
+  left: 200px;
+  font-size: 5em;
+  margin: 0;
+}
+
+.major-skill.entreprenuership {
+  position: absolute;
+  top: 225px;
+  left: -40px;
+}
+
+.second-container .too {
+  position: absolute;
+  top: 225px;
+  left: 551px;
+  font-size: 5em;
 }
