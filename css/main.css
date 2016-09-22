@@ -73,10 +73,16 @@ h2 {
 
 .second-container h2 {
   margin: 10px;
+  position: absolute;
+  left: 0;
 }
 
 .skills-wrapper {
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 460px;
 }
 
 .major-skill {
