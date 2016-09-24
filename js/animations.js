@@ -1,4 +1,4 @@
-// PureJS document.ready
+// Pure javascript document.ready
 function ready(fn) {
   if (document.readyState != 'loading'){
     fn();
@@ -9,16 +9,15 @@ function ready(fn) {
 
 function getOffsetFromTop(elementId) {
   var elem = document.getElementById(elementId).getBoundingClientRect();
-  console.log(elem  , elem.top , elem.height , document.documentElement.clientHeight);
   return (elem.top - elem.height) + window.scrollY - 400;
 }
 
 ready(function(){
-  scrollEvents.changeClass(".major-skill.web", "hide", "bounceIn");
-  scrollEvents.changeClass(".major-skill.ios", "hide", "bounceIn", 50);
-  scrollEvents.changeClass(".connector", "hide", "bounceIn", 50);
+  scrollEvents.changeClass(".major-skill.web", "bounceOut", "bounceIn");
+  scrollEvents.changeClass(".major-skill.ios", "bounceOut", "bounceIn", 50);
+  scrollEvents.changeClass(".connector", "bounceOut", "bounceIn", 50);
 
-  scrollEvents.changeClass(".major-skill.entreprenuership", "hide", "fadeIn", 100);
+  scrollEvents.changeClass(".major-skill.entreprenuership", "fadeOut", "fadeIn", 100);
   scrollEvents.changeClass(".too", "hide", "fadeIn", 100);
 
   scrollEvents.changeClass("#project-1", "slideOutLeft", "slideInLeft", getOffsetFromTop('project-1'));

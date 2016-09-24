@@ -9,8 +9,8 @@
  */
 
 .animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
@@ -2166,6 +2166,24 @@
   animation-name: lightSpeedOut;
   -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform:rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform:rotate(360deg);
+  }
+}
+
+.rotate {
+  -webkit-animation:rotate 10s linear infinite;
+  -moz-animation:rotate 10s linear infinite;
+  animation:rotate 10s linear infinite;
 }
 
 @-webkit-keyframes rotateIn {
