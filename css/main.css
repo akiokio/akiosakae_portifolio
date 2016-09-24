@@ -170,20 +170,22 @@ h2 {
 .major-skill.ios {
   position: absolute;
   top: 135px;
-  left: 75px;
+  left: 155px;
+  display: block;
+  width: 100%;
 }
 
 .secondary-skill.objc,
 .secondary-skill.slash,
 .secondary-skill.swift {
   position: relative;
-  left: -380px;
+  left: -390px;
 }
 
 .second-container .connector {
   position: absolute;
   top: 135px;
-  left: 200px;
+  left: 290px;
   font-size: 5em;
   margin: 0;
 }
