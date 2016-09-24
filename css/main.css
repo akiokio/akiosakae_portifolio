@@ -5,20 +5,39 @@
 
 /* GENERIC CLASSES OBS. FOR FLEXBOX ROW */
 .all-in-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
 }
 
 .horizontal-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+    justify-content: center;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 .vertical-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
 }
 
 h1 {
@@ -113,7 +132,8 @@ h2 {
 
 .secondary-skill.frontend {
   position: absolute;
-  transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
   display: block;
   top: -40px;
   left: 130px;
@@ -121,7 +141,8 @@ h2 {
 
 .secondary-skill.backend {
   position: absolute;
-  transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
   display: block;
   top: 0px;
   left: 140px;
@@ -129,7 +150,8 @@ h2 {
 
 .secondary-skill.equal {
   position: absolute;
-  transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
   display: block;
   top: -50px;
   left: 290px;
@@ -138,7 +160,8 @@ h2 {
 
 .secondary-skill.fullstack {
   position: absolute;
-  transform: rotate(-8deg);
+  -webkit-transform: rotate(-8deg);
+          transform: rotate(-8deg);
   display: block;
   top: -50px;
   left: 332px;
@@ -262,7 +285,8 @@ h2 {
   left: 140px;
   width: 220px;
   height: 150px;
-  transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
 }
 
 .linkedin-bubble img {
