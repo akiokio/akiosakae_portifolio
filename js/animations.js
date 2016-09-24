@@ -10,7 +10,7 @@ function ready(fn) {
 function getOffsetFromTop(elementId) {
   var elem = document.getElementById(elementId).getBoundingClientRect();
   console.log(elem  , elem.top , elem.height , document.documentElement.clientHeight);
-  return elem.top - elem.height;
+  return (elem.top - elem.height) + window.scrollY - 400;
 }
 
 ready(function(){
