@@ -65,6 +65,10 @@ h2 {
   color: #FFF;
 }
 
+.hide {
+  display: none !important;
+}
+
 /* FIRST CONTAINER */
 .first-container {
     background: url('../img/bgs/main_bg.jpg');
@@ -204,6 +208,10 @@ h2 {
 }
 
 /* Third container */
+.third-container {
+  overflow-x: hidden;
+}
+
 .third-container h2 {
   margin: 15px 0 0 10px;
 }

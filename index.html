@@ -14,6 +14,7 @@
     <!--[if gt IE 8]><!-->
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
     <!--<![endif]-->
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/main.css">
 
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
@@ -52,19 +53,19 @@
         <h2 class="plain-white">I do...</h2>
 
         <div class=" skills-wrapper">
-          <p class="gold-yellow major-skill web">web<span class="deep-red secondary-skill frontend">frontend</span>
+          <p class="gold-yellow major-skill web animated hide">web<span class="deep-red secondary-skill frontend">frontend</span>
             <span class="deep-red secondary-skill backend">backend</span>
             <span class="gold-yellow secondary-skill equal">=</span>
             <span class="gold-yellow secondary-skill fullstack">Fullstack</span>
           </p>
-          <p class="gold-yellow major-skill ios">
+          <p class="gold-yellow major-skill ios animated hide">
             iOS <span class="deep-red secondary-skill objc">Obj-C</span>
                 <span class="plain-white secondary-skill slash">/</span>
                 <span class="deep-red secondary-skill swift">Swift</span>
           </p>
-          <p class="plain-white connector">and</p>
-          <p class="gold-yellow major-skill entreprenuership">entreprenuership</p>
-          <span class="plain-white too">too</span>
+          <p class="plain-white connector hide">and</p>
+          <p class="gold-yellow major-skill entreprenuership animated hide">entreprenuership</p>
+          <span class="plain-white too animated hide">too</span>
         </div>
       </div>
     </div>
@@ -73,7 +74,7 @@
       <div class="pure-u-1-1 headline">
         <h2>I built...</h1>
       </div>
-      <div class="pure-u-22-24 all-in-center project-container">
+      <div id="project-1" class="pure-u-22-24 all-in-center project-container animated">
         <div class="pure-u-11-24 project-screenshot">
           <img class="pure-img" src="img/projects/bwid_startup.png" alt="project-logo" />
         </div>
@@ -85,7 +86,7 @@
           <p><a class="pure-button" href="http://getbwid.com" target="_blank">See in action</a></p>
         </div>
       </div>
-      <div class="pure-u-22-24 all-in-center project-container">
+      <div id="project-2" class="pure-u-22-24 all-in-center project-container animated">
         <div class="pure-u-11-24 project-screenshot">
           <img class="pure-img" src="img/projects/bwid_app.png" alt="project-logo" />
         </div>
@@ -97,7 +98,7 @@
           <p><a class="pure-button" href="https://itunes.apple.com/us/app/bwid-restaurantes-abertos/id905148403?mt=8" target="_blank">See in action</a></p>
         </div>
       </div>
-      <div class="pure-u-22-24 all-in-center project-container">
+      <div id="project-3" class="pure-u-22-24 all-in-center project-container animated">
         <div class="pure-u-11-24 project-screenshot">
           <img class="pure-img" src="img/projects/bwid_web_cp.png" alt="project-logo" />
         </div>
@@ -109,7 +110,7 @@
           <p><a class="pure-button" href="http://cp.getbwid.com" target="_blank">See in action</a></p>
         </div>
       </div>
-      <div class="pure-u-22-24 all-in-center project-container">
+      <div id="project-4" class="pure-u-22-24 all-in-center project-container animated">
         <div class="pure-u-11-24 project-screenshot">
           <img class="pure-img" src="img/projects/jazz_side.png" alt="project-logo" />
         </div>
@@ -121,7 +122,7 @@
           <p><a class="pure-button" href="http://jazzside.com.br" target="_blank">See in action</a></p>
         </div>
       </div>
-      <div class="pure-u-22-24 all-in-center project-container">
+      <div id="project-5" class="pure-u-22-24 all-in-center project-container animated">
         <div class="pure-u-11-24 project-screenshot">
           <img class="pure-img" src="img/projects/graogourmet.png" alt="project-logo" />
         </div>
@@ -175,4 +176,6 @@
       </div>
     </div>
   </body>
+  <script src="https://cdn.rawgit.com/ryanpcmcquen/scrollEvents/8793e40a1b98516dec7b7d22a3c9bfb1026fea55/scrollEvents.min.js"></script>
+  <script src="js/animations.js" charset="utf-8"></script>
 </html>
