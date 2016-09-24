@@ -55,11 +55,16 @@ h2 {
 }
 
 .logo {
-  width: 70%;
+  width: 205px;
+  height: 223px;
 }
 
 .site-title {
   margin: 0;
+  color: #fff;
+}
+
+.main-contact {
   color: #fff;
 }
 
@@ -171,4 +176,112 @@ h2 {
   top: 225px;
   left: 551px;
   font-size: 5em;
+}
+
+/* Third container */
+.third-container h2 {
+  margin: 15px 0 0 10px;
+}
+
+.project-container {
+
+}
+
+.project-screenshot {
+  padding: 15px;
+}
+
+.project-details h3 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.project-details p {
+  margin: 10px 0;
+}
+
+.more-projects-btn {
+  margin: 50px auto;
+  height: 100px;
+  font-size: 2em;
+  color: #fff;
+
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: rgb(66, 184, 221);
+}
+
+/* FORTH CONTAINER */
+.fourth-container {
+  background: #1c2222;
+  color: #fff;
+  padding: 0 0 10px;
+}
+
+.fourth-container h2 {
+  margin: 15px 0 0 10px;
+  color: #fff;
+  font-size: 4em;
+}
+
+.fourth-container .details {
+  margin: 50px 10px 0;
+}
+
+.fourth-container .subtitle {
+  color: #fff;
+  font-size: 2em;
+  margin: 0;
+}
+
+.social-media-link {
+  position: relative;
+}
+
+.social-media-link img {
+  width: 64px;
+  height: auto;
+  display: inline-block;
+}
+
+.social-media-link a {
+  color: #fff;
+  display: inline-block;
+  margin: 0 0 0 15px;
+  font-size: 2em;
+}
+
+.linkedin-bubble {
+  color: #fff;
+  position: absolute;
+  top: -130px;
+  left: 140px;
+  width: 220px;
+  height: 150px;
+  transform: rotate(15deg);
+}
+
+.linkedin-bubble img {
+  position: absolute;
+  width: 238px;
+  height: auto;
+  z-index: 1;
+}
+
+.alternative-contact p,
+.alternative-contact a {
+  text-align: center;
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+/* FIFTH CONTAINER */
+.fifth-container {
+  height: 100px;
+  background: #fecd08;
+  color: #1c2222;
+}
+
+.fifth-container p {
+  font-size: 1.5em;
 }
