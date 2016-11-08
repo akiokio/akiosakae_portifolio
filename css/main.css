@@ -41,7 +41,7 @@
 }
 
 h1 {
-  font-size: 7em;
+  font-size: 3em;
 }
 
 h2 {
@@ -74,7 +74,7 @@ h2 {
     background: url('../img/bgs/main_bg.jpg');
     background-size: cover;
 
-    height: 500px;
+    height: 350px;
 }
 
 .logo {
@@ -117,7 +117,7 @@ h2 {
 }
 
 .major-skill {
-  font-size: 5em;
+  font-size: 3em;
   font-weight: 100;
   margin: 0;
 }
@@ -130,8 +130,8 @@ h2 {
 
 .major-skill.web {
   position: absolute;
-  top: 65px;
-  left: -85px;
+  top: 135px;
+  left: 15px;
 }
 
 .secondary-skill.frontend {
@@ -139,8 +139,8 @@ h2 {
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
   display: block;
-  top: -40px;
-  left: 130px;
+  top: -25px;
+  left: 76px;
 }
 
 .secondary-skill.backend {
@@ -149,7 +149,7 @@ h2 {
           transform: rotate(-15deg);
   display: block;
   top: 0px;
-  left: 140px;
+  left: 80px;
 }
 
 .secondary-skill.equal {
@@ -157,24 +157,24 @@ h2 {
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
   display: block;
-  top: -50px;
-  left: 290px;
+  top: -40px;
+  left: 180px;
   font-size: 0.8em;
 }
 
 .secondary-skill.fullstack {
   position: absolute;
-  -webkit-transform: rotate(-8deg);
-          transform: rotate(-8deg);
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
   display: block;
-  top: -50px;
-  left: 332px;
+  top: -46px;
+  left: 202px;
 }
 
 .major-skill.ios {
   position: absolute;
-  top: 135px;
-  left: 155px;
+  top: 185px;
+  left: 125px;
   display: block;
   width: 100%;
 }
@@ -183,21 +183,23 @@ h2 {
 .secondary-skill.slash,
 .secondary-skill.swift {
   position: relative;
-  left: -390px;
+  font-size: 0.4em;
+  left: -203px;
 }
 
 .second-container .connector {
   position: absolute;
-  top: 135px;
-  left: 290px;
-  font-size: 5em;
+  top: 175px;
+  left: 212px;
+  font-size: 3em;
   margin: 0;
 }
 
 .major-skill.entreprenuership {
   position: absolute;
-  top: 225px;
-  left: -40px;
+  top: 255px;
+  left: 10px;
+  font-size: 2.5em;
 }
 
 .second-container .too {
@@ -226,15 +228,24 @@ h2 {
 }
 .project-details {
   max-width: 500px;
+
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
 }
 
 .project-details h3 {
   font-size: 3em;
   margin: 0;
+
+  width: 100%;
+  text-align: center;
 }
 
 .project-details p {
   margin: 10px 0;
+  width: 100%;
+  text-align: center;
 }
 
 .more-projects-btn {
@@ -258,21 +269,22 @@ h2 {
 .fourth-container h2 {
   margin: 15px 0 0 10px;
   color: #fff;
-  font-size: 4em;
+  font-size: 2em;
 }
 
 .fourth-container .details {
-  margin: 50px 10px 0;
+  margin: 25px 10px 0;
 }
 
 .fourth-container .subtitle {
   color: #fff;
-  font-size: 2em;
+  font-size: 1.3em;
   margin: 0;
 }
 
 .social-media-link {
   position: relative;
+  margin: 10px 0;
 }
 
 .social-media-link img {
@@ -321,5 +333,101 @@ h2 {
 }
 
 .fifth-container p {
-  font-size: 1.5em;
+  font-size: 1em;
+  text-align: center;
+}
+
+/* SM */
+@media screen and (min-width: 35.5em) {
+
+}
+
+/* MD */
+@media screen and (min-width: 48em) {
+  h1 {
+    font-size: 7em;
+  }
+
+  .first-container {
+    height: 500px;
+  }
+
+  .major-skill {
+    font-size: 5em;
+  }
+
+  .major-skill.web {
+    top: 65px;
+    left: -85px;
+  }
+
+  .secondary-skill.frontend {
+    top: -20px;
+    left: 130px;
+  }
+
+  .secondary-skill.backend {
+    top: 20px;
+    left: 140px;
+  }
+
+  .secondary-skill.equal {
+    top: -40px;
+    left: 290px;
+  }
+
+  .secondary-skill.fullstack {
+    top: -50px;
+    left: 332px;
+  }
+
+  .major-skill.ios {
+    top: 135px;
+    left: 155px;
+  }
+
+  .secondary-skill.objc,
+  .secondary-skill.slash,
+  .secondary-skill.swift {
+    font-size: 0.5em;
+    left: -390px;
+  }
+
+  .second-container .connector {
+    top: 135px;
+    left: 290px;
+    font-size: 5em;
+  }
+
+  .major-skill.entreprenuership {
+    top: 225px;
+    left: -40px;
+    font-size: 5em;
+  }
+
+  .fourth-container .details {
+    margin: 50px 10px 0;
+  }
+
+  .fourth-container h2 {
+    font-size: 4em;
+  }
+
+  .fourth-container .subtitle {
+    font-size: 2em;
+  }
+
+  .fifth-container p {
+    font-size: 1.25em;
+  }
+}
+
+/* LG */
+@media screen and (min-width: 64em) {
+
+}
+
+/* XL */
+@media screen and (min-width: 80em) {
+
 }
