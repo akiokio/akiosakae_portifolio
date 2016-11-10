@@ -3,6 +3,10 @@
   color: #1c2222;
 }
 
+.main-container {
+  overflow-x:hidden;
+}
+
 /* GENERIC CLASSES OBS. FOR FLEXBOX ROW */
 .all-in-center {
   display: -webkit-box;
@@ -73,7 +77,8 @@ h2 {
 .first-container {
     background: url('../img/bgs/main_bg.jpg');
     background-size: cover;
-
+    flex-flow: row wrap;
+    display: flex;
     height: 350px;
 }
 
@@ -99,84 +104,53 @@ h2 {
 /* SECOND CONTAINER */
 .second-container {
   background: #1c2222;
-  height: 350px;
+  height: 370px;
 }
 
 .second-container h2 {
   margin: 10px;
-  position: absolute;
+  position: relative;
   left: 0;
 }
 
 .skills-wrapper {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 460px;
+  width: 100%;
+  height: 234px;
+  position: relative;
+  top: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .major-skill {
   font-size: 3em;
-  font-weight: 100;
+  font-weight: 400;
   margin: 0;
+
+  width: 100%;
+  text-align: center;
 }
 
 .secondary-skill {
-  font-size: 0.5em;
   font-weight: 700;
   margin: 0;
 }
 
 .major-skill.web {
-  position: absolute;
-  top: 135px;
-  left: 15px;
+  position: relative;
+  top: -20px;
 }
 
-.secondary-skill.frontend {
-  position: absolute;
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
-  display: block;
-  top: -25px;
-  left: 76px;
-}
-
-.secondary-skill.backend {
-  position: absolute;
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
-  display: block;
-  top: 0px;
-  left: 80px;
-}
-
-.secondary-skill.equal {
-  position: absolute;
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
-  display: block;
-  top: -40px;
-  left: 180px;
-  font-size: 0.8em;
-}
-
-.secondary-skill.fullstack {
-  position: absolute;
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
-  display: block;
-  top: -46px;
-  left: 202px;
+.web-secondary {
+  position: relative;
+  top: -20px;
 }
 
 .major-skill.ios {
-  position: absolute;
-  top: 185px;
-  left: 125px;
-  display: block;
-  width: 100%;
+  position: relative;
+  top: -20px;
 }
 
 .secondary-skill.objc,
@@ -184,29 +158,21 @@ h2 {
 .secondary-skill.swift {
   position: relative;
   font-size: 0.4em;
-  left: -203px;
+  left: 0px;
 }
 
 .second-container .connector {
-  position: absolute;
-  top: 175px;
-  left: 212px;
-  font-size: 3em;
+  position: relative;
+  top: -40px;
+  left: 110px;
+  font-size: 2em;
   margin: 0;
 }
 
 .major-skill.entreprenuership {
-  position: absolute;
-  top: 255px;
-  left: 10px;
+  position: relative;
+  top: -50px;
   font-size: 2.5em;
-}
-
-.second-container .too {
-  position: absolute;
-  top: 225px;
-  left: 551px;
-  font-size: 5em;
 }
 
 /* Third container */
@@ -357,51 +323,46 @@ h2 {
   }
 
   .major-skill.web {
-    top: 65px;
-    left: -85px;
+    top: -105px;
+    width: 150px;
+  }
+
+  .web-secondary {
+    position: relative;
+    top: -80px;
   }
 
   .secondary-skill.frontend {
     top: -20px;
-    left: 130px;
   }
 
   .secondary-skill.backend {
-    top: 20px;
-    left: 140px;
-  }
-
-  .secondary-skill.equal {
-    top: -40px;
-    left: 290px;
+    top: 10px;
   }
 
   .secondary-skill.fullstack {
-    top: -50px;
-    left: 332px;
+    top: -37px;
   }
 
   .major-skill.ios {
-    top: 135px;
-    left: 155px;
+    top: -120px;
   }
 
   .secondary-skill.objc,
   .secondary-skill.slash,
   .secondary-skill.swift {
     font-size: 0.5em;
-    left: -390px;
+    left: 0px;
   }
 
   .second-container .connector {
-    top: 135px;
-    left: 290px;
-    font-size: 5em;
+    top: -135px;
+    left: 0px;
+    font-size: 3em;
   }
 
   .major-skill.entreprenuership {
-    top: 225px;
-    left: -40px;
+    top: -160px;
     font-size: 5em;
   }
 

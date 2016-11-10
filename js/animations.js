@@ -14,6 +14,7 @@ function getOffsetFromTop(elementId) {
 
 ready(function(){
   scrollEvents.changeClass(".major-skill.web", "bounceOut", "bounceIn");
+  scrollEvents.changeClass(".web-secondary", "bounceOut", "bounceIn");
   scrollEvents.changeClass(".major-skill.ios", "bounceOut", "bounceIn", 50);
   scrollEvents.changeClass(".connector", "bounceOut", "bounceIn", 50);
 
