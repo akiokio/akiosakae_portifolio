@@ -185,7 +185,6 @@ h2 {
 }
 
 .project-container {
-
 }
 
 .project-screenshot {
@@ -223,6 +222,34 @@ h2 {
   border-radius: 4px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   background: rgb(66, 184, 221);
+}
+
+.card-wrapper {
+  width: 100%;
+  height: 0px;
+  transition: height 1s;
+  display: flex;
+  justify-content: center;
+  overflow-y: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card {
+  background: #fafafa;
+  margin: 0 10px;
+  padding: 0 10px;
+  overflow-y: scroll;
+}
+
+.card .description {
+  font-size: 0.8em;
+}
+
+.card .justified {
+  text-align: justify;
 }
 
 /* FORTH CONTAINER */
@@ -391,4 +418,30 @@ h2 {
 /* XL */
 @media screen and (min-width: 80em) {
 
+}
+
+/* PURECSS Buttons */
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-success {
+    background: rgb(28, 184, 65); /* this is a green */
+}
+
+.button-error {
+    background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.button-warning {
+    background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.button-secondary {
+    background: rgb(66, 184, 221); /* this is a light blue */
 }
