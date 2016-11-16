@@ -1,4 +1,5 @@
 (function () {
+  // Helper functions
   function outerHeight(el) {
     var height = el.offsetHeight;
     var style = getComputedStyle(el);
@@ -7,15 +8,17 @@
     return height;
   }
 
-  var cardBtn = document.querySelector('.card-button');
-  var cardWrapper = cardBtn.parentElement.querySelector('.card-wrapper');
+  var cardBtns = document.getElementsByClassName('card-button');
+  Array.prototype.forEach.call(cardBtns, function(cardBtn) {
+    var cardWrapper = cardBtn.parentElement.querySelector('.card-wrapper');
 
-  cardBtn.addEventListener('click', function(e){
-    e.preventDefault();
-    cardWrapper.style.height = outerHeight(this.parentElement.parentElement) + "px";
-  });
+    cardBtn.addEventListener('click', function(e){
+      e.preventDefault();
+      cardWrapper.style.height = outerHeight(this.parentElement.parentElement) + "px";
+    });
 
-  cardWrapper.addEventListener('click', function(e){
-    cardWrapper.style.height = "0px";
+    cardWrapper.addEventListener('click', function(e){
+      cardWrapper.style.height = "0px";
+    });
   });
 })();
