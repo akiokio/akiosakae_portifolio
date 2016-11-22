@@ -264,6 +264,13 @@ h2 {
   text-align: justify;
 }
 
+.card .tag {
+  background: #FFF;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0px 5px rgba(0,0,0,0.19), 0 2px 2px rgba(0,0,0,0.23);
+}
+
 /* FORTH CONTAINER */
 .fourth-container {
   background: #1c2222;
