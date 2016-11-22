@@ -335,6 +335,7 @@ h2 {
   height: 100px;
   background: #fecd08;
   color: #1c2222;
+  display: flex;
 }
 
 .fifth-container p {
