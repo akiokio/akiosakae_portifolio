@@ -2,27 +2,24 @@ var path = require('path');
 var webpack = require('webpack');
  
 module.exports = {
-  entry: [
-    'webpack-dev-server/client?http://0.0.0.0:3000', // WebpackDevServer host and port
-    'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
-    './app/main' // Your appʼs entry point
-  ],
+  entry: './app/main.js',
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: __dirname,
     filename: 'bundle.js',
-    publicPath: '/app/'
   },
   module: {
     loaders: [
       {
         test: /.jsx?$/,
-        loaders: ['react-hot', 'babel-loader'],
+        loader: 'babel-loader',
         exclude: /node_modules/,
+        query: {
+          presets: ['es2015', 'react']
+        }
       }
     ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('development')
@@ -30,7 +27,7 @@ module.exports = {
     })
   ],
   debug: true,
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   resolve: {
     extensions: ['', '.js', '.jsx']
   }
