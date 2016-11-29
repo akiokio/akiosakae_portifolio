@@ -13,13 +13,12 @@ app.use(require('webpack-dev-middleware')(compiler, {
 app.use(require('webpack-hot-middleware')(compiler));
 
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'app/index.html'));
 });
 
 app.listen(3000, function(err) {
   if (err) {
     return console.error(err);
   }
-
   console.log('Listening at http://localhost:3000/');
 })
