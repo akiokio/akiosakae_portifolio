@@ -14,6 +14,7 @@ class ProjectList extends React.Component {
           <h2>I built...</h2>
         </div>
         {projectCardsList}
+        <button className="pure-button more-projects-btn" type="button" name="more-projects">And much more</button>
       </div>
     )
   }
