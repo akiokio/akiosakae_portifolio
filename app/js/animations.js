@@ -1,3 +1,5 @@
+import ProjectsDataSource from '../projectsData';
+
 // Pure javascript document.ready
 function ready(fn) {
   if (document.readyState != 'loading'){
@@ -20,10 +22,11 @@ ready(function(){
 
   scrollEvents.changeClass(".major-skill.entreprenuership", "fadeOut", "fadeIn", 100);
   scrollEvents.changeClass(".too", "hide", "fadeIn", 100);
-
-  scrollEvents.changeClass("#project-0", "slideOutLeft", "slideInLeft", getOffsetFromTop('project-0'));
-  scrollEvents.changeClass("#project-1", "slideOutLeft", "slideInLeft", getOffsetFromTop('project-1'));
-  scrollEvents.changeClass("#project-2", "slideOutRight", "slideInRight", getOffsetFromTop('project-2'));
-  scrollEvents.changeClass("#project-3", "slideOutLeft", "slideInLeft", getOffsetFromTop('project-3'));
-  scrollEvents.changeClass("#project-4", "slideOutRight", "slideInRight", getOffsetFromTop('project-4'));
+  
+  // Add the slides to the projects dinamically
+  for (var i = 0; i < ProjectsDataSource.length; i++) {
+    ProjectsDataSource[i]
+    const slideEffect = (i % 2) === 0 ? { in: "slideInLeft", out: "slideOutLeft" } : { in: "slideInRight", out: "slideOutRight" };
+    scrollEvents.changeClass(`#project-${i}`, slideEffect.out, slideEffect.in, getOffsetFromTop(`project-${i}`));
+  }
 });

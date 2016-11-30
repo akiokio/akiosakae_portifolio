@@ -49,8 +49,12 @@
 	var _projectList = __webpack_require__(1);
 	
 	var _projectList2 = _interopRequireDefault(_projectList);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _interopRequireDefault(obj) {
+	  return obj && obj.__esModule ? obj : { default: obj };
+	}
+	
+	__webpack_require__(182);
 
 /***/ },
 /* 1 */
@@ -21788,6 +21792,51 @@
 	};
 	
 	exports.default = CardWrapper;
+
+/***/ },
+/* 182 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _projectsData = __webpack_require__(179);
+	
+	var _projectsData2 = _interopRequireDefault(_projectsData);
+	
+	function _interopRequireDefault(obj) {
+	  return obj && obj.__esModule ? obj : { default: obj };
+	}
+	
+	// Pure javascript document.ready
+	function ready(fn) {
+	  if (document.readyState != 'loading') {
+	    fn();
+	  } else {
+	    document.addEventListener('DOMContentLoaded', fn);
+	  }
+	}
+	
+	function getOffsetFromTop(elementId) {
+	  var elem = document.getElementById(elementId).getBoundingClientRect();
+	  return elem.top - elem.height + window.scrollY - 400;
+	}
+	
+	ready(function () {
+	  scrollEvents.changeClass(".major-skill.web", "bounceOut", "bounceIn");
+	  scrollEvents.changeClass(".web-secondary", "bounceOut", "bounceIn");
+	  scrollEvents.changeClass(".major-skill.ios", "bounceOut", "bounceIn", 50);
+	  scrollEvents.changeClass(".connector", "bounceOut", "bounceIn", 50);
+	
+	  scrollEvents.changeClass(".major-skill.entreprenuership", "fadeOut", "fadeIn", 100);
+	  scrollEvents.changeClass(".too", "hide", "fadeIn", 100);
+	
+	  // Add the slides to the projects dinamically
+	  for (var i = 0; i < _projectsData2.default.length; i++) {
+	    _projectsData2.default[i];
+	    var slideEffect = i % 2 === 0 ? { in: "slideInLeft", out: "slideOutLeft" } : { in: "slideInRight", out: "slideOutRight" };
+	    scrollEvents.changeClass('#project-' + i, slideEffect.out, slideEffect.in, getOffsetFromTop('project-' + i));
+	  }
+	});
 
 /***/ }
 /******/ ]);
