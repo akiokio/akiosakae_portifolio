@@ -1,1 +1,1 @@
-import ProjectList from './js/projectList.jsx';
+import ProjectList from './js/projectList';

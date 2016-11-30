@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "babel app -d build",
-    "start": "webpack --progress --colors --watch"
+    "start": "webpack --progress --colors --watch & http-server"
   },
   "repository": {
     "type": "git",

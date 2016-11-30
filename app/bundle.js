@@ -72,9 +72,9 @@
 	
 	var _projectsData2 = _interopRequireDefault(_projectsData);
 	
-	var _projectCard = __webpack_require__(180);
+	var _project = __webpack_require__(180);
 	
-	var _projectCard2 = _interopRequireDefault(_projectCard);
+	var _project2 = _interopRequireDefault(_project);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -97,7 +97,7 @@
 	    key: 'render',
 	    value: function render() {
 	      var projectCardsList = this.props.projectsData.map(function (project, index) {
-	        return _react2.default.createElement(_projectCard2.default, { key: 'project-' + index, project: project, index: index });
+	        return _react2.default.createElement(_project2.default, { key: 'project-' + index, project: project, index: index });
 	      });
 	      return _react2.default.createElement(
 	        'div',
@@ -21511,13 +21511,13 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var ProjectCard = function (_React$Component) {
-	  _inherits(ProjectCard, _React$Component);
+	var Project = function (_React$Component) {
+	  _inherits(Project, _React$Component);
 	
-	  function ProjectCard(props) {
-	    _classCallCheck(this, ProjectCard);
+	  function Project(props) {
+	    _classCallCheck(this, Project);
 	
-	    var _this = _possibleConstructorReturn(this, (ProjectCard.__proto__ || Object.getPrototypeOf(ProjectCard)).call(this, props));
+	    var _this = _possibleConstructorReturn(this, (Project.__proto__ || Object.getPrototypeOf(Project)).call(this, props));
 	
 	    _this.openCard = _this.openCard.bind(_this);
 	    _this.closeCard = _this.closeCard.bind(_this);
@@ -21529,7 +21529,7 @@
 	    return _this;
 	  }
 	
-	  _createClass(ProjectCard, [{
+	  _createClass(Project, [{
 	    key: 'outerHeight',
 	    value: function outerHeight(el) {
 	      var height = el.offsetHeight;
@@ -21608,10 +21608,10 @@
 	    }
 	  }]);
 	
-	  return ProjectCard;
+	  return Project;
 	}(_react2.default.Component);
 	
-	ProjectCard.propTypes = {
+	Project.propTypes = {
 	  project: _react2.default.PropTypes.shape({
 	    name: _react2.default.PropTypes.string.isRequired,
 	    description: _react2.default.PropTypes.string.isRequired,
@@ -21627,7 +21627,7 @@
 	  index: _react2.default.PropTypes.number.isRequired
 	};
 	
-	exports.default = ProjectCard;
+	exports.default = Project;
 
 /***/ },
 /* 181 */

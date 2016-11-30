@@ -1,7 +1,7 @@
 import React from 'react';
 import CardWrapper from './cardWrapper';
 
-class ProjectCard extends React.Component {
+class Project extends React.Component {
   constructor(props) {
     super(props);
 
@@ -54,7 +54,7 @@ class ProjectCard extends React.Component {
   }
 }
 
-ProjectCard.propTypes = {
+Project.propTypes = {
   project: React.PropTypes.shape({
     name: React.PropTypes.string.isRequired,
     description: React.PropTypes.string.isRequired,
@@ -70,4 +70,4 @@ ProjectCard.propTypes = {
   index: React.PropTypes.number.isRequired,
 }
 
-export default ProjectCard;
+export default Project;

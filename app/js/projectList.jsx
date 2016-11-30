@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ProjectsDataSource from '../projectsData';
-import ProjectCard from './projectCard';
+import Project from './project';
 
 class ProjectList extends React.Component {
   render() {
     const projectCardsList = this.props.projectsData.map((project, index) => {
-      return <ProjectCard key={`project-${index}`} project={project} index={index} />
+      return <Project key={`project-${index}`} project={project} index={index} />
     });
     return (
       <div className="pure-u-1-1 horizontal-center third-container">
