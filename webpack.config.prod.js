@@ -3,7 +3,10 @@ var webpack = require('webpack');
  
 module.exports = {
   entry: './app/main.js',
-  output: { path: __dirname, filename: 'app/bundle.js' },
+  output: {
+    path: path.join(__dirname, 'app'),
+    filename: 'bundle.js'
+  },
   module: {
     loaders: [
       {
@@ -11,9 +14,14 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
-          presets: ['stage-0', 'es2015', 'react']
+          presets: ['es2015', 'react']
         }
-      }
+      },
+      { 
+        test: /\.js$/, 
+        exclude: /node_modules/, 
+        loader: "babel-loader" 
+      },
     ]
   },
   plugins: [
@@ -23,14 +31,14 @@ module.exports = {
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
-      compress: {
-          warnings: false
-      }
+        compress: {
+            warnings: false
+        }
     })
   ],
-  devServer: {
-    contentBase: path.join(__dirname, "app"),
-    compress: true,
-    port: 9000
+  debug: true,
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['', '.js', '.jsx']
   }
 };

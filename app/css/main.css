@@ -75,11 +75,11 @@ h2 {
 
 /* FIRST CONTAINER */
 .first-container {
-    background: url('../img/bgs/main_bg.jpg');
-    background-size: cover;
-    flex-flow: row wrap;
-    display: flex;
-    height: 350px;
+  background: url('../img/bgs/main_bg.jpg');
+  background-size: cover;
+  flex-flow: row wrap;
+  display: flex;
+  height: 350px;
 }
 
 .logo {
