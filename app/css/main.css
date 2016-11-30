@@ -270,6 +270,7 @@ h2 {
 
 .card .tag {
   background: #FFF;
+  margin: 0 5px;
   padding: 5px;
   border-radius: 5px;
   box-shadow: 0 0px 5px rgba(0,0,0,0.19), 0 2px 2px rgba(0,0,0,0.23);

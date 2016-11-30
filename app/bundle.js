@@ -21487,7 +21487,7 @@
 /* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -21498,6 +21498,10 @@
 	var _react = __webpack_require__(2);
 	
 	var _react2 = _interopRequireDefault(_react);
+	
+	var _cardWrapper = __webpack_require__(181);
+	
+	var _cardWrapper2 = _interopRequireDefault(_cardWrapper);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -21516,165 +21520,89 @@
 	    var _this = _possibleConstructorReturn(this, (ProjectCard.__proto__ || Object.getPrototypeOf(ProjectCard)).call(this, props));
 	
 	    _this.openCard = _this.openCard.bind(_this);
+	    _this.closeCard = _this.closeCard.bind(_this);
+	    _this.outerHeight = _this.outerHeight.bind(_this);
 	
 	    _this.state = {
-	      isOpen: false
+	      cardHeight: 0
 	    };
 	    return _this;
 	  }
 	
 	  _createClass(ProjectCard, [{
-	    key: "openCard",
-	    value: function openCard() {
+	    key: 'outerHeight',
+	    value: function outerHeight(el) {
+	      var height = el.offsetHeight;
+	      var style = getComputedStyle(el);
+	
+	      height += parseInt(style.marginTop) + parseInt(style.marginBottom);
+	      return height;
+	    }
+	  }, {
+	    key: 'openCard',
+	    value: function openCard(e) {
 	      this.setState({
-	        isOpen: true
+	        cardHeight: this.outerHeight(e.target.parentElement.parentElement)
 	      });
 	    }
 	  }, {
-	    key: "render",
+	    key: 'closeCard',
+	    value: function closeCard(e) {
+	      this.setState({
+	        cardHeight: 0
+	      });
+	    }
+	  }, {
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
-	        { id: "project-" + this.props.index, className: "pure-u-22-24 all-in-center project-container animated" },
+	        'div',
+	        { id: 'project-' + this.props.index, className: 'pure-u-22-24 all-in-center project-container animated' },
 	        _react2.default.createElement(
-	          "div",
-	          { className: "pure-u-1-1 pure-u-sm-1-1 pure-u-md-11-24 project-screenshot" },
-	          _react2.default.createElement("img", { className: "pure-img", src: this.props.project.previewImgUrl, alt: "project-logo" })
+	          'div',
+	          { className: 'pure-u-1-1 pure-u-sm-1-1 pure-u-md-11-24 project-screenshot' },
+	          _react2.default.createElement('img', { className: 'pure-img', src: this.props.project.previewImgUrl, alt: 'project-logo' })
 	        ),
 	        _react2.default.createElement(
-	          "div",
-	          { className: "pure-u-1-1 pure-u-sm-1-1 pure-u-md-11-24 project-details" },
+	          'div',
+	          { className: 'pure-u-1-1 pure-u-sm-1-1 pure-u-md-11-24 project-details' },
 	          _react2.default.createElement(
-	            "h3",
+	            'h3',
 	            null,
-	            this.props.project.name,
-	            " ",
-	            JSON.stringify(this.state)
+	            this.props.project.name
 	          ),
 	          _react2.default.createElement(
-	            "p",
+	            'p',
 	            null,
 	            this.props.project.description
 	          ),
 	          _react2.default.createElement(
-	            "p",
+	            'p',
 	            null,
 	            this.props.project.pitch
 	          ),
 	          _react2.default.createElement(
-	            "p",
+	            'p',
 	            null,
 	            this.props.project.role
 	          ),
 	          _react2.default.createElement(
-	            "p",
+	            'p',
 	            null,
 	            _react2.default.createElement(
-	              "a",
-	              { className: "pure-button button-secondary", href: this.props.project.link, target: "_blank" },
-	              _react2.default.createElement("i", { className: "fa fa-magic white-ico", "aria-hidden": "true" }),
-	              "\xA0\xA0See in action"
+	              'a',
+	              { className: 'pure-button button-secondary', href: this.props.project.link, target: '_blank' },
+	              _react2.default.createElement('i', { className: 'fa fa-magic white-ico', 'aria-hidden': 'true' }),
+	              '\xA0\xA0See in action'
 	            )
 	          ),
 	          _react2.default.createElement(
-	            "button",
-	            { className: "pure-button card-button button-success", onClick: this.openCard },
-	            _react2.default.createElement("i", { className: "fa fa-plus-circle white-ico", "aria-hidden": "true" }),
-	            "\xA0Tell me more"
+	            'button',
+	            { className: 'pure-button card-button button-success', onClick: this.openCard },
+	            _react2.default.createElement('i', { className: 'fa fa-plus-circle white-ico', 'aria-hidden': 'true' }),
+	            '\xA0Tell me more'
 	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "card-wrapper" },
-	            _react2.default.createElement(
-	              "div",
-	              { className: "card" },
-	              _react2.default.createElement(
-	                "p",
-	                null,
-	                _react2.default.createElement(
-	                  "strong",
-	                  null,
-	                  "Goal:"
-	                ),
-	                " ",
-	                this.props.project.goal
-	              ),
-	              _react2.default.createElement(
-	                "p",
-	                null,
-	                _react2.default.createElement(
-	                  "strong",
-	                  null,
-	                  "Skills:"
-	                ),
-	                " ",
-	                this.props.project.skills
-	              ),
-	              _react2.default.createElement(
-	                "p",
-	                null,
-	                _react2.default.createElement(
-	                  "strong",
-	                  null,
-	                  "Tech Stack:"
-	                ),
-	                "\xA0",
-	                _react2.default.createElement(
-	                  "span",
-	                  { className: "tag" },
-	                  _react2.default.createElement("i", { className: "fa fa-tag", "aria-hidden": "true" }),
-	                  "\xA0"
-	                ),
-	                _react2.default.createElement(
-	                  "span",
-	                  { className: "tag" },
-	                  _react2.default.createElement("i", { className: "fa fa-tag", "aria-hidden": "true" }),
-	                  "\xA0"
-	                ),
-	                _react2.default.createElement(
-	                  "span",
-	                  { className: "tag" },
-	                  _react2.default.createElement("i", { className: "fa fa-tag", "aria-hidden": "true" }),
-	                  "\xA0"
-	                ),
-	                _react2.default.createElement(
-	                  "span",
-	                  { className: "tag" },
-	                  _react2.default.createElement("i", { className: "fa fa-tag", "aria-hidden": "true" }),
-	                  "\xA0"
-	                ),
-	                _react2.default.createElement(
-	                  "span",
-	                  { className: "tag" },
-	                  _react2.default.createElement("i", { className: "fa fa-tag", "aria-hidden": "true" }),
-	                  "\xA0"
-	                ),
-	                _react2.default.createElement(
-	                  "span",
-	                  { className: "tag" },
-	                  _react2.default.createElement("i", { className: "fa fa-tag", "aria-hidden": "true" }),
-	                  "\xA0"
-	                ),
-	                _react2.default.createElement(
-	                  "span",
-	                  { className: "tag" },
-	                  _react2.default.createElement("i", { className: "fa fa-tag", "aria-hidden": "true" }),
-	                  "\xA0"
-	                ),
-	                _react2.default.createElement(
-	                  "span",
-	                  { className: "tag" },
-	                  _react2.default.createElement("i", { className: "fa fa-tag", "aria-hidden": "true" }),
-	                  "\xA0"
-	                )
-	              ),
-	              _react2.default.createElement(
-	                "p",
-	                null,
-	                this.props.project.bigDescription
-	              )
-	            )
-	          )
+	          _react2.default.createElement(_cardWrapper2.default, { project: this.props.project, height: this.state.cardHeight, onClose: this.closeCard })
 	        )
 	      );
 	    }
@@ -21700,6 +21628,117 @@
 	};
 	
 	exports.default = ProjectCard;
+
+/***/ },
+/* 181 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var CardWrapper = function (_React$Component) {
+	  _inherits(CardWrapper, _React$Component);
+	
+	  function CardWrapper(props) {
+	    _classCallCheck(this, CardWrapper);
+	
+	    return _possibleConstructorReturn(this, (CardWrapper.__proto__ || Object.getPrototypeOf(CardWrapper)).call(this, props));
+	  }
+	
+	  _createClass(CardWrapper, [{
+	    key: 'render',
+	    value: function render() {
+	      var tagList = this.props.project.techStack.split(',').map(function (tech, index) {
+	        return _react2.default.createElement(
+	          'span',
+	          { className: 'tag', key: index },
+	          _react2.default.createElement('i', { className: 'fa fa-tag', 'aria-hidden': 'true' }),
+	          '\xA0 ',
+	          tech
+	        );
+	      });
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'card-wrapper', style: { height: this.props.height + 'px' }, onClick: this.props.onClose },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'card' },
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            _react2.default.createElement(
+	              'strong',
+	              null,
+	              'Goal:'
+	            ),
+	            ' ',
+	            this.props.project.goal
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            _react2.default.createElement(
+	              'strong',
+	              null,
+	              'Skills:'
+	            ),
+	            ' ',
+	            this.props.project.skills
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            _react2.default.createElement(
+	              'strong',
+	              null,
+	              'Tech Stack:'
+	            ),
+	            '\xA0',
+	            tagList
+	          ),
+	          _react2.default.createElement('p', { dangerouslySetInnerHTML: { __html: this.props.project.bigDescription } })
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return CardWrapper;
+	}(_react2.default.Component);
+	
+	CardWrapper.propTypes = {
+	  project: _react2.default.PropTypes.shape({
+	    name: _react2.default.PropTypes.string.isRequired,
+	    description: _react2.default.PropTypes.string.isRequired,
+	    pitch: _react2.default.PropTypes.string.isRequired,
+	    role: _react2.default.PropTypes.string.isRequired,
+	    link: _react2.default.PropTypes.string.isRequired,
+	    previewImgUrl: _react2.default.PropTypes.string.isRequired,
+	    goal: _react2.default.PropTypes.string.isRequired,
+	    skills: _react2.default.PropTypes.string.isRequired,
+	    techStack: _react2.default.PropTypes.string.isRequired,
+	    bigDescription: _react2.default.PropTypes.string.isRequired
+	  }).isRequired,
+	  onClose: _react2.default.PropTypes.func.isRequired
+	};
+	
+	exports.default = CardWrapper;
 
 /***/ }
 /******/ ]);

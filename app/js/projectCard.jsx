@@ -1,20 +1,37 @@
 import React from 'react';
+import CardWrapper from './cardWrapper';
 
 class ProjectCard extends React.Component {
   constructor(props) {
     super(props);
 
     this.openCard = this.openCard.bind(this);
+    this.closeCard = this.closeCard.bind(this);
+    this.outerHeight = this.outerHeight.bind(this);
 
     this.state = {
-      isOpen: false
-    };
+      cardHeight: 0,
+    }
   }
 
-  openCard() {
+  outerHeight(el) {
+    let height = el.offsetHeight;
+    const style = getComputedStyle(el);
+
+    height += parseInt(style.marginTop) + parseInt(style.marginBottom);
+    return height;
+  }
+
+  openCard(e) {
     this.setState({
-      isOpen: true
+      cardHeight: this.outerHeight(e.target.parentElement.parentElement),
     });
+  }
+
+  closeCard(e) {
+    this.setState({
+      cardHeight: 0,
+    })
   }
 
   render() {
@@ -24,29 +41,13 @@ class ProjectCard extends React.Component {
           <img className="pure-img" src={this.props.project.previewImgUrl} alt="project-logo" />
         </div>
         <div className="pure-u-1-1 pure-u-sm-1-1 pure-u-md-11-24 project-details">
-          <h3>{this.props.project.name} {JSON.stringify(this.state)}</h3>
+          <h3>{this.props.project.name}</h3>
           <p>{this.props.project.description}</p>
           <p>{this.props.project.pitch}</p>
           <p>{this.props.project.role}</p>
           <p><a className="pure-button button-secondary" href={this.props.project.link} target="_blank"><i className="fa fa-magic white-ico" aria-hidden="true" />&nbsp;&nbsp;See in action</a></p>
           <button className="pure-button card-button button-success" onClick={this.openCard}><i className="fa fa-plus-circle white-ico" aria-hidden="true" />&nbsp;Tell me more</button>
-          <div className="card-wrapper">
-            <div className="card">
-              <p><strong>Goal:</strong> {this.props.project.goal}</p>
-              <p><strong>Skills:</strong> {this.props.project.skills}</p>
-              <p><strong>Tech Stack:</strong>&nbsp;
-                <span className="tag"><i className="fa fa-tag" aria-hidden="true" />&nbsp;</span>
-                <span className="tag"><i className="fa fa-tag" aria-hidden="true" />&nbsp;</span>
-                <span className="tag"><i className="fa fa-tag" aria-hidden="true" />&nbsp;</span>
-                <span className="tag"><i className="fa fa-tag" aria-hidden="true" />&nbsp;</span>
-                <span className="tag"><i className="fa fa-tag" aria-hidden="true" />&nbsp;</span> 
-                <span className="tag"><i className="fa fa-tag" aria-hidden="true" />&nbsp;</span>
-                <span className="tag"><i className="fa fa-tag" aria-hidden="true" />&nbsp;</span>
-                <span className="tag"><i className="fa fa-tag" aria-hidden="true" />&nbsp;</span>
-              </p>
-              <p>{this.props.project.bigDescription}</p>
-            </div>
-          </div>
+          <CardWrapper project={this.props.project} height={this.state.cardHeight} onClose={this.closeCard}/>
         </div>
       </div>
     )
