@@ -190,7 +190,16 @@ h2 {
 .project-screenshot {
   padding: 15px;
   max-width: 500px;
+  max-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.project-screenshot img {
+  max-height: 500px;
+}
+
 .project-details {
   max-width: 500px;
 

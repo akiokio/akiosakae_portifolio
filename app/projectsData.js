@@ -50,7 +50,7 @@ const projectsData = [
   {
     name: "Grão Gourmet",
     description: "Premium coffess delivered every month at your door",
-    pitch: "Built with Python, Django, Postgress, JS and Fullstack Developmente",
+    pitch: "Built with Python, Django, Postgress, JS and Fullstack Development",
     role: "Main role was Software Engineer",
     link: "https://www.graogourmet.com/",
     previewImgUrl: "img/projects/graogourmet.png",
@@ -58,6 +58,18 @@ const projectsData = [
     skills: "Development",
     techStack: "Python,Django,Javascript,Git,Postgresql,AngularJS",
     bigDescription: "<p class='description justified'>Because they were just starting they didn't have a clear vision about the product so communication was key to deliver a excellent product that last for years. At the time of creation there was not a solution that meet all their requirements so we built from the ground up the whole platform, including the subscription, e-commerce store, content pages, payment and shipping integrations.</p><p class='description justified'>Grao Gourmet works in a very different way compared to the big coffee stores in Brazil, they offer a very personalized experience at good rates and they really love what they do. The startup is growing fast and getting more and more users every month.</p>",
+  },
+  {
+    name: "Tagarela",
+    description: "Earn money answering questions",
+    pitch: "Built with Objective-C and xCode",
+    role: "Main role was Software Engineer",
+    link: "https://itunes.apple.com/BR/app/id959559817",
+    previewImgUrl: "img/projects/tagarela.jpg",
+    goal: "Build a fun and flexible iOS app",
+    skills: "Development",
+    techStack: "Objective-C,Git",
+    bigDescription: "<p class='description justified'>This project was composed by an iOS developer (me), two android developers, a backend developer and a project manager so planning was crucial to the success of the project. An agile methodology was chosen and the team had daily meetings, clear sprint goals and retrospectives to understand what went well and what went wrong.</p><p class='description justified'>Tagarela is a review company that pay users based on their reviews. Because the reviews can be done in many shape and forms the app needed to be very flexible accepting a variety of questions types, answers types and missions. The possible inputs can be text, number, a photo, a geolocation or a photo in a location and the questions can have any type of possible answers too. Moreover, all content is dynamic and modified in a backend.</p>",
   },
 ]
 
