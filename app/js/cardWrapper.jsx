@@ -7,7 +7,7 @@ class CardWrapper extends React.Component {
 
   render() {
     const tagList = this.props.project.techStack.split(',').map((tech, index) => {
-      return <span className="tag" key={index}><i className="fa fa-tag" aria-hidden="true" />&nbsp; {tech}</span>
+      return <span className="tag" key={index}><i className="fa fa-tag hide-xs" aria-hidden="true" />&nbsp; {tech}</span>
     });
     return (
       <div className="card-wrapper" style={{height: `${this.props.height}px`}} onClick={this.props.onClose}>
