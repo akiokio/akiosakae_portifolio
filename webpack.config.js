@@ -8,19 +8,23 @@ module.exports = {
     filename: './app/bundle.js',
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /.jsx?$/,
-        loader: 'babel-loader',
+        use: [ 
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['es2015', 'react']
+            }
+          },
+        ],
         exclude: /node_modules/,
-        query: {
-          presets: ['es2015', 'react']
-        }
       },
       { 
         test: /\.js$/, 
-        exclude: /node_modules/, 
-        loader: "babel-loader" 
+        exclude: /node_modules/,
+        use: ['babel-loader',],
       }
     ]
   },
@@ -31,9 +35,8 @@ module.exports = {
       }
     })
   ],
-  debug: true,
   devtool: 'source-map',
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['.js', '.jsx']
   }
 };
