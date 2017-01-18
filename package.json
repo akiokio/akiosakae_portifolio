@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --progress --colors",
-    "build:prod": "rimraf ./dist && webpack --progress --colors --optimize-occurrence-order --optimize-dedupe --config webpack.config.prod.js",
-    "start": "webpack-dev-server --content-base app/ --inline --hot"
+    "build:prod": "rimraf ./dist && webpack --progress --colors --optimize-occurrence-order --optimize-dedupe -p --config webpack.config.prod.js",
+    "start": "webpack --progress --colors --watch & http-server"
   },
   "repository": {
     "type": "git",
@@ -36,10 +36,9 @@
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "2.2.0",
-    "webpack-dev-server": "1.16.2",
-    "webpack-hot-middleware": "^2.13.2",
-    "webpack-livereload-plugin": "0.10.0"
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-hot-middleware": "^2.13.2"
   },
   "dependencies": {
     "react": "^15.4.1",
