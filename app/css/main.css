@@ -49,7 +49,7 @@ h1 {
 }
 
 h2 {
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 900;
 }
 
@@ -351,6 +351,28 @@ h2 {
   margin: 10px 0;
 }
 
+/* ABOUT CONTAINER */
+.about-container {
+  background: #fff;
+  color: #1c2222;
+  padding: 0 0 10px;
+  margin: 25px 0;
+}
+
+.about-container h2 {
+  margin: 15px 0 0 10px;
+  color: #1c2222;
+  font-size: 2em;
+}
+
+.about-container .headline {
+  margin: 0 0 25px 0;
+}
+
+.about-container .me-pic {
+  max-width: 320px;
+}
+
 /* FIFTH CONTAINER */
 .fifth-container {
   height: 100px;
@@ -440,11 +462,11 @@ h2 {
   }
 
   .fourth-container h2 {
-    font-size: 4em;
+    font-size: 2em;
   }
 
   .fourth-container .subtitle {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   .fifth-container p {
